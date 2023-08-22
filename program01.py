@@ -217,9 +217,7 @@ def ex1(acn1, acn2, acn3, imd_acn1, imd_acn2, init_amount, transact_log):
                             debito_imdacn1=debito_imdacn1
                             saldo_intermediario1=saldo_intermediario1
                     return saldo_giocatore, debito_imdacn1, debito_imdacn2, saldo_intermediario1, saldo_intermediario2
-
-            
-            
+  
 # se entrambi i debiti sono uguali a zero ritorna senza modificare
 
             return saldo_giocatore, debito_imdacn1, debito_imdacn2,saldo_intermediario1,saldo_intermediario2               
@@ -239,9 +237,7 @@ def ex1(acn1, acn2, acn3, imd_acn1, imd_acn2, init_amount, transact_log):
         
         saldo_intermediario1 = saldi_intermediari[imd_acn1]
         saldo_intermediario2 = saldi_intermediari[imd_acn2]
-        
-       
-        
+    
         importo_commissione=(importo*(commissione/100))
         
         saldo_giocatore, debito_imdacn1, debito_imdacn2, saldo_intermediario1, saldo_intermediario2 = distribuisci_soldi(saldi_giocatori[mittente], debiti[imd_acn1][mittente], debiti[imd_acn2][mittente],saldi_intermediari[imd_acn1], saldi_intermediari[imd_acn2])
@@ -265,18 +261,12 @@ def ex1(acn1, acn2, acn3, imd_acn1, imd_acn2, init_amount, transact_log):
             debiti[imd_acn1][destinatario] = debito_imdacn1
             debiti[imd_acn2][destinatario] = debito_imdacn2
             saldi_intermediari[imd_acn1] = saldo_intermediario1
-            saldi_intermediari[imd_acn2] = saldo_intermediario2
-            
-            
-            
-            
-            
-      
+            saldi_intermediari[imd_acn2] = saldo_intermediario
                 
       
         #CASO 2: se il saldo del giocatore è compreso tra importo_commmissione  e importo+importo_commissione
         #in questo caso al destinatario non arriva nulla e arriva solo all'intermediario
-        #NO DEBITO
+        
         elif (importo + importo_commissione)>saldi_giocatori[mittente]>= importo_commissione:
             saldi_giocatori[mittente]=saldi_giocatori[mittente]-importo_commissione
             
