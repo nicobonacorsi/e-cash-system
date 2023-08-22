@@ -52,7 +52,7 @@ For example, the following tuple:
     - and the intermediary will earn and deposit on their account (0x1612)
         32Ħ.
 
-Notice that wether the funds in the sender’s account are insufficient,
+Notice that if the funds in the sender’s account are insufficient,
     the transaction is declared invalid by the intermediary. The intermediary
     will get the fee anyway from the sender, if there are enough Ħ’s in the
     sender’s account. If the sender’s account cannot pay the transaction fee,
@@ -66,7 +66,7 @@ Notice that wether the funds in the sender’s account are insufficient,
     obliged to repay the 22Ħ getting the due amount from the transactions
     received later until the debt is extinguished.
 
-    If a debt is accumulated towards two intermediary agents, funds go to the
+If a debt is accumulated towards two intermediary agents, funds go to the
     intermediary having the highest credit first, and the remainder goes to
     the other intermediary, for as much as is left. For instance, let player 1
     owe 300Ħ to intermediary 1 and 200Ħ to intermediary 2; as player 1
